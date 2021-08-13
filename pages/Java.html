@@ -1,0 +1,288 @@
+<link rel="stylesheet" type="text/css" href="css/tab.css" />
+		
+<script>
+	$( function() {
+	  $( "#tabs" ).tabs();
+	} );
+	</script>
+
+<style>
+table {
+font-size: 1em;
+}
+
+.ui-draggable, .ui-droppable {
+background-position: top;
+}
+
+h2.a {
+ font-family: "Times New Roman";
+ margin-left: 50px;
+ margin-right: 50px;
+ color: black;
+} 
+p.ee {
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+ font-weight: bold;
+ font-size: 17px;
+	margin-left: 50px;
+}
+h2.b {
+	font-family: "Times New Roman";
+ margin-left: 50px;
+ color: orange;
+ 
+}
+p.c {
+ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+ font-weight: bold;
+ font-size: 17px;
+	margin-left: 50px;
+}
+h2.d {
+	 font-family: "Times New Roman";
+ margin-left: 50px;
+ margin-right: 50px;
+ COLOR: black;
+
+}
+p.e {
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	font-weight: bold;
+	font-size: 17px;
+	margin-left: 50px;	
+}
+p#f {
+	
+	font-weight: bold;
+	font-size: 17px;
+	color: rgb(214, 40, 40);
+	margin-left: 50px;	
+}
+p.g {
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	font-weight: bold;
+	font-size: 17px;
+	margin-left: 50px;
+	
+}
+h2.h {
+	font-family: "Times New Roman";
+	color: blue;
+	font-size: 30px;
+	margin-left: 50px;
+
+}
+h2.i {
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	font-weight: bold;
+	margin-left: 50px;	
+}
+
+h3.j {
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	font-weight: bold;
+	color: green;
+	margin-left: 50px;
+}
+ li#demo {
+	float: right;
+}
+h1.z  {
+	font-family: 'Times New Roman', Times, serif;
+	font-size: 30px;
+	color: red;
+	text-align: center;
+}
+#tabs{
+	margin-top:50px;	
+	}
+	#boxshadow {
+  position: relative;
+  -moz-box-shadow: 1px 2px 4px rgba(0, 0, 0,0.5);
+  -webkit-box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+  padding: 5px;
+  background: rgb(203, 248, 255);
+}
+
+/* Make the image fit the box */
+#boxshadow img {
+  /* width: 100%; */
+  border: 1px solid #8a4419;
+  border-style: inset;
+}
+
+#boxshadow::after {
+  content: '';
+  position: absolute;
+  z-index: -1; /* hide shadow behind image */
+  -webkit-box-shadow: 0 16px 21px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 16px 21px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 16px 21px rgba(0, 0, 0, 0.3);        
+  width: 70%; 
+  left: 15%; 
+  height: 100px;
+  bottom: 0;
+}
+</style>
+
+
+<div id="tabs">
+	<ul>
+	  <li><a href="#tabs-1">DETAILS</a></li>
+	  <li><a href="#tabs-2">SCHEDULE</a></li>
+	
+	</ul>
+	<div id="tabs-1" style="background-color: lightcyan">
+	  
+	  <h1 class="z"><ins>PROGRAMMING IN JAVA</ins></H1>
+		
+  <center><img src="img/java1.png" height="250px" width="300px"></img></center><br>
+  
+  <div>
+		<div id="boxshadow">
+		  <h2 class="a">COURSE INTRODUCTION</H2>	
+  <p class="ee">Java is a general-purpose programming language that is class-based, object-oriented (although not a pure OO language, as it contains primitive types), and designed to have as few implementation dependencies as possible. It is intended to let application developers write once, run anywhere (WORA), meaning that compiled Java code can run on all platforms that support Java without the need for recompilation.</p>
+  <p class="ee">Java applications are typically compiled to bytecode that can run on any Java virtual machine (JVM) regardless of the underlying computer architecture.</p>
+  <p class="ee">The syntax of Java is similar to C and C++, but it has fewer low-level facilities than either of them. As of 2018, Java was one of the most popular programming languages in use according to GitHub,[19][20] particularly for client-server web applications, with a reported 9 million developers.</p></div>
+  <br>
+  <div id="boxshadow">
+  <h2 class="b">CURRICULUM</h2>
+  <p class="c">The course curriculum focuses on developing real-world skills and is uniquely designed. Throughout the course, you will build your own feature-rich Library Management Application with new features being added in every module.
+  <br>This project-based learning approach will help you understand the web development concepts clearly and enable you to use various development tools in the most efficient ways.</p>
+   </div>
+   <br>
+   <div id="boxshadow">
+  <h2 class="d">ABOUT COURSE</H2>
+   <p class="e"> This course is designed in a unique way where you will build a feature-rich Library Management Application throughout the course. This project-based learning approach will help you understand each element of full stack application development and learn how to use various development tools in the most efficient ways.<br>
+  <br> These are the key features of the Library Management Application you will build: </p>
+  <p id="f"-Dashboard<br>
+  -User Management<br>
+  -Role Access<br>
+  -Category Management<br>
+  -Author Management<br>
+  -Book Management<br>
+  -Student Management<br>
+  -Issuing Book<br>
+  -Returning Book<br>
+  -Reports<br>
+  -Alerts<br></p>
+  <p class="g">After successfully completing this project, you will be ready to build any customer-focused application with complex features. Your faculty will work closely with you throughout the application development phase.</p>
+	
+  <br>
+  
+  <h2 class="h">Principles</h2>
+  <h2 class="i">There were five primary goals in the creation of the java language.</h2>
+  <h3  class="j"> 
+   It must be robust and secure.<br>  					
+   It must be architecture-neutral and portable.<br>    
+   It must execute with high performance.  <br>           
+   It must be interpreted, threaded, and dynamic. </h3></div>
+   
+  
+  </div>
+  
+
+			  
+			</div>
+		 <div id="tabs-2" style="background-color: lightcyan">
+			
+<style>
+		table {
+		font-family: arial, sans-serif;
+		border-collapse: collapse;
+	  width: 100%;
+	  color: black;
+		}
+	
+		td, th {
+		border: 1px solid ;
+		text-align: LEFT;
+		padding: 8px;
+		}
+		
+		tr:nth-child(even) {
+		background-color: #dddddd;
+		}
+	   
+	
+		h1.a {
+		  font-family: "Times New Roman";
+		  text-align: center;
+		  color:black;
+		  margin:  0px 403px 0px 403px;
+		}
+		h4.b {
+			font-style: oblique;
+			font-weight: light;
+			text-align: center;
+			color: black;
+		}
+		h3.c {
+			 font-family: "Times New Roman";
+			 text-align: center;
+			 color: black;
+		}
+		h3.e {
+			font-family: "Times New Roman";
+			 text-align: center;
+			 color: black;
+	  }
+	  
+		 
+		 
+	</style>
+	 
+	 
+	 <body>
+		
+	<div style="text-align: center">
+	  <h1 class="a">Course Schedule-2019</h1>
+		 <h4 class="b">As of June, 2019 </h4>
+		 <h3 class="c">Term : June - December</h3>
+		 <div>
+		  <table>
+			<tr>
+			  <th>DAYS</th>
+			  <th>TIME</th>
+			  <th>DURATION</th>
+			</tr>
+			<tr>
+			  <td>Monday</td>
+			  <td>2:00 pm</td>
+			  <td>3 hours</td>
+			</tr>
+			<tr>
+			  <td>Tuesday</td>
+			  <td>Self Study</td>
+			  <td>-</td>
+			</tr>
+			<tr>
+			  <td>Wednesday</td>
+			  <td>2:00 pm</td>
+			  <td>3 hours</td>
+			</tr>
+			<tr>
+			  <td>Thursday</td>
+			  <td>Self Study</td>
+			  <td>-</td>
+			</tr>
+			<tr>
+			  <td>Friday</td>
+			  <td>2:00 pm</td>
+			  <td>3 hours</td>
+			</tr>
+			<tr>
+			  <td>Saturday-EXAM</td>
+			  <td>3:00 pm</td>
+			  <td>3 hours</td>
+			</tr>
+		  </table>
+		</div>
+		  </body>
+		  
+		  <br>
+			  <h3 class="e">ABC Learning Center reserves the right to change this schedule at any time with or without prior notice.</h3>
+			  
+			  </div>

@@ -1,0 +1,172 @@
+<style>
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+  }
+  input[type=text], select, textarea {
+			width: 100%;
+			padding: 12px;
+			border: 1px solid ;
+			border-radius: 4px;
+			box-sizing: border-box;
+			margin-top: 6px;
+			margin-bottom: 16px;
+			resize: vertical;
+		  }
+		  input[type=password], select, textarea {
+			width: 100%;
+			padding: 12px;
+			border: 1px solid ;
+			border-radius: 4px;
+			box-sizing: border-box;
+			margin-top: 6px;
+			margin-bottom: 16px;
+			resize: vertical;
+		  }
+		  
+		  input[type=submit],input[type=reset] {
+			background-color: #84e8d6;
+			color: black;
+			padding: 12px 20px;
+			border: none;
+			border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+      margin-bottom: 15px;
+		  }
+		  
+		 
+  </style>
+
+<div class="container">
+    <h1 class="aaa" >REGISTRATION FORM</h1>
+    <div class="form-signup" id="singup" style="margin-left:50px;margin-right:50px">
+      <form  action="" method="post" >
+          <label for="firstname">First Name: <input type="text" class="fname" name="firstname" placeholder="Enter First Name"></label><br>
+          <label for="lastname">Last Name: <input type="text" class="lname" name="lastname" placeholder="Enter Last Name"></label><br>
+    <label for="address">Address: <input type="text" class="address" name="address" placeholder="Enter Address"></label><br>
+          <label for="email">Email: <input type="text" class="email" name="email" placeholder="Enter Email Address"></label><br>
+          <label for="password">Password: <input type="password" class="pwd" name="password" placeholder="Enter Password"></label><br>
+          <label for="confrm password">Confirm Password: <input type="password" class="conpwd" name="password" placeholder="Confirm Password"></label><br>
+    
+          <input type="submit" name="submit" value="Submit" >
+          <br>
+           <input type="reset" name="reset" value="Reset">
+      </form>
+  </div><br />
+  <script>
+//onsubmit="return singup()"
+      
+
+
+      function tc(a) {
+          var x = document.querySelector(a).value;
+          return x;
+      }
+      function msg(a) {
+          var x = document.querySelector(".emsg").innerHTML = a;
+          return x;
+      }
+      function msgb(a) {
+          var x = document.querySelector(".emsgb").innerHTML = a;
+          return x;
+      }
+      function size(a) {
+          var x = document.querySelector(a).value.length;
+          return x;
+      }
+      // show hide function
+      //var idhide=document.getElementById("singup");
+      function singu() {
+          var hide = document.querySelector(".form-login");
+
+          if (hide.classList[1] == "hidden") {
+              hide.classList.toggle("visible");
+          } else {
+              hide.classList.toggle("hidden");
+          }
+          console.log(hide.classList);
+          return hide;
+      }
+      // Sing up
+      function singup() {
+          if (tc(".fname") == null || tc(".fname") == "") {
+              window.alert("Please Enter First name");
+              return false;
+          }
+          if (tc(".lname") == null || tc(".lname") == "") {
+              window.alert("Please Enter Last name");
+              return false;
+          }
+    if (tc(".address") == null || tc(".address") == "") {
+              window.alert("Please Enter Address");
+              return false;
+          }
+          if (tc(".email") == null || tc(".email") == "") {
+              window.alert("Please Enter Email");
+              return false;
+          }
+          if (tc(".pwd") == null || tc(".pwd") == "") {
+              window.alert("Please Enter Password");
+              return false;
+          }
+          if (tc(".pwd") != tc(".conpwd")) {
+              window.alert("Password Miss match");
+              return false;
+          }
+          if (size(".pwd") <= 8) {
+              window.alert("Minimum Password length 8");
+              return false;
+          }
+    return true;
+      }
+  
+  
+$(document).ready(function() {
+
+  // process the form
+  $('form').submit(function(event) {
+  
+  
+  if( singup() ){
+   
+  
+      // get the form data
+      // there are many ways to get this data using jQuery (you can use the class or id also)
+      
+
+  $firstname = $('input[name=firstname]').val() ;
+      $lastname = $('input[name=lastname]').val() ;
+  $address = $('input[name=address]').val() ;
+      $email = $('input[name=email]').val() ;;
+      $password = $('input[name=password]').val() ;
+
+//
+
+    // process the form
+    $.ajax({
+      type        : 'POST', // define the type of HTTP verb we want to use (POST for our form)
+      url         : 'registeration.php', // the url where we want to POST
+      data        : 'firstname=' + $firstname + '&lastname=' + $lastname + '&address=' + $address +'&email=' + $email + '&password=' + $password , // our data object
+      dataType    : 'html',// what type of data do we expect back from the server
+       success: function(data) { 
+      console.log(data); 
+        $('#thanks').html(data);
+            
+          window.location.replace("#Thankyou");
+          $('#thanks').show();
+       }
+    })
+  }
+  event.preventDefault();
+  
+      
+  });
+
+});
+  
+  
+  
+  </script>
+
+</body>

@@ -1,0 +1,66 @@
+
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+/** {box-sizing: border-box;}*/
+h2.pq {
+    color: black;
+    margin-left: 20px;
+}
+#boxshadow {
+  position: relative;
+  -moz-box-shadow: 1px 2px 4px rgba(0, 0, 0,0.5);
+  -webkit-box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+  padding: 5px;
+  background: rgb(155, 216, 216);
+}
+
+/* Make the image fit the box */
+#boxshadow img {
+  /* width: 100%; */
+  border: 1px solid #8a4419;
+  border-style: inset;
+}
+
+#boxshadow::after {
+  content: '';
+  position: absolute;
+  z-index: -1; /* hide shadow behind image */
+  -webkit-box-shadow: 0 16px 21px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 16px 21px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 16px 21px rgba(0, 0, 0, 0.3);        
+  /* width: 70%;  */
+  /* left: 15%;  */
+  /* height: 100px; */
+  bottom: 0;
+}
+</style>
+</head>
+
+<body>  
+<h1 class="zzz">CONTACT US</h1>
+<h2 class="bbb">REACH US</h2>
+<h3 class="ccc"><em>If you have any questions or requests concerning our services
+  Then you're just one call away! We are here to help you out.
+ </em></h3>   
+<h2 class="pq">Toll Free(Australia) : 18663036061<br><br>
+  Freephone (UK) : 08081013408 <br><br>
+  Freephone (Sri lanka) : 1800949046 <br><br>
+  Phone : +14164816946 <br><br>
+  Email :  <a href="#mailto:someone@example.com"> someone@example.com</h2></a> <br>
+
+
+
+<!-- <div style="background: #84e8d6; margin-left: 100px; margin-right: 100px;"> -->
+  <div id="boxshadow">
+<h1 class="ww">GENERAL</h2>
+  <h2 style="color:black; text-align: center; font-family: 'Times New Roman', Times, serif;" >MUMBAI</h2>
+<h3 	style="font-size:180%; font-family:'Courier New', Courier, monospace; text-align:center; color: black">ABC Learning center</h3>
+	<address style="font-size:170%; font-family:courier;  text-align:center;"><b>701,Maxus complex<BR>Bandra West<br>Mumbai 400064</b></address><br>
+  
+
+    <h3 style="font-size:140%; font-family:courier;text-align:center; color:black;">Tel   0222886546</h3>
+  </div>
+</div>
+</body>
+</html>
